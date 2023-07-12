@@ -1,0 +1,54 @@
+package giris;
+import java.sql.SQLOutput;
+import java.util.Scanner;
+public class class3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int mat, turkce, fizik, kimya, muzik;
+        System.out.println("Matematik notunuzu giriniz: ");
+        mat = input.nextInt();
+        System.out.println("Fizik notunuzu giriniz: ");
+        fizik = input.nextInt();
+        System.out.println("Kimya notunuzu giriniz: ");
+        kimya = input.nextInt();
+        System.out.println("Türkçe notunuzu giriniz: ");
+        turkce = input.nextInt();
+        System.out.println("Müzik notunuzu giriniz: ");
+        muzik = input.nextInt();
+        double ortalama = 0.0;
+        int ortalamaders = 0;
+        if (mat>=0 && mat<=100){
+            ortalama = ortalama + mat;
+            ortalamaders++;
+        }
+        if (turkce>=0 && turkce<=100){
+            ortalama = ortalama + turkce;
+            ortalamaders++;
+        }
+        if (fizik>=0 && fizik<=100){
+            ortalama = ortalama + fizik;
+            ortalamaders++;
+        }
+        if (kimya>=0 && kimya<=100){
+            ortalama = ortalama + kimya;
+            ortalamaders++;
+        }
+        if (muzik>=0 && muzik<=100){
+            ortalama = ortalama + muzik;
+            ortalamaders++;
+        }
+        double genelortalama = ortalama/ortalamaders;
+
+        if (genelortalama >= 60) {
+            System.out.println("Geçtiniz.");
+            System.out.println("Şu kadar ders ortalamaya katıldı: "+ortalamaders);
+            System.out.println("Ortalamanız: "+genelortalama);
+        } else if (genelortalama >= 0 && genelortalama < 60) {
+            System.out.println("Kaldınız.");
+            System.out.println("Şu kadar ders ortalamaya katıldı: "+ortalamaders);
+            System.out.println("Ortalamanız: "+genelortalama);
+        }
+
+
+        }}
+
